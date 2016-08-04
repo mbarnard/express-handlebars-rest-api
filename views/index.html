@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Express Server &amp; REST API</title>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body lang="en">
+
+    <h1>New York Times Top 20 Best Selling Hardcover Fiction</h1>
+    <!-- Results list -->
+    <ul class="book-list">
+      <!-- loop through results and display -->
+      {{#each results}}
+      <li class="book-item">
+
+        <p class="ranking">List ranking: {{rank}} / Weeks on list: {{weeks_on_list}}</p>
+
+        <!-- loop further through nested objects -->
+        {{#each book_details}}
+          <h2>{{title}}</h2>
+          <h3>{{author}}</h3>
+          <p class="description">{{description}}</p>
+          <p class="meta">
+            Publisher: {{publisher}} / ISBN: {{primary_isbn13}}
+          </p>
+        {{/each}}
+
+        <p class="date">Date published: {{published_date}}</p>
+
+        <p class="purchase">Buy on Amazon Books: <a href={{amazon_product_url}}>{{#each book_details}} {{title}} {{/each}}</a></p>
+
+      </li>
+      {{/each}}
+    </ul>
+
+    <p class="copyright">
+      {{copyright}}
+    </p>
+
+  </body>
+
+</html>

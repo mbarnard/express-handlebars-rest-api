@@ -1,0 +1,24 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "consume web api using express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "api",
+    "passport",
+    "jade"
+  ],
+  "author": "Martin Barnard",
+  "license": "MIT",
+  "dependencies": {
+    "consolidate": "^0.14.1",
+    "express": "^4.14.0",
+    "handlebars": "^4.0.5",
+    "superagent": "^2.1.0"
+  }
+}
