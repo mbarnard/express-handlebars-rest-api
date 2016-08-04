@@ -43,7 +43,7 @@ app.get('/', function(req, res, next) {
   })
 });
 
-// Error middleware fot 404
+// Error middleware for 404
 app.use(function(err, req, res, next) {
   console.error(err);
   next(err);

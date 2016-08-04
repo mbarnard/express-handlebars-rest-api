@@ -1,6 +1,6 @@
 # Express Server & REST API
 
-#### A simple project opener using Express, SuperAgent and Handlebars to consume and display a RESTful API provided by The New York Times.
+#### A quick project opener using Express, SuperAgent and Handlebars to consume and display a RESTful API provided by The New York Times.
 
 Obtain an api key from https://developer.nytimes.com.
 I chose to use the Books section of this API available here https://developer.nytimes.com/books_api.json and the relevant console for querying different parameters and checking the JSON structure.
