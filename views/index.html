@@ -14,30 +14,30 @@
 
 <body lang="en">
 
-    <h1>New York Times Top 20 Best Selling Hardcover Fiction</h1>
+  <h1>New York Times Top 20 Best Selling Hardcover Fiction</h1>
     <!-- Results list -->
     <ul class="book-list">
-      <!-- loop through results and display -->
+    <!-- loop through results and display -->
       {{#each results}}
-      <li class="book-list__item">
+        <li class="book-list__item">
 
-        <p class="ranking">List ranking: {{rank}} / Weeks on list: {{weeks_on_list}}</p>
+          <p class="ranking">List ranking: {{rank}} / Weeks on list: {{weeks_on_list}}</p>
 
-        <!-- loop further through nested objects -->
-        {{#each book_details}}
-          <h2>{{title}}</h2>
-          <h3>{{author}}</h3>
-          <p class="description">{{description}}</p>
-          <p class="meta">
-            Publisher: {{publisher}} / ISBN: {{primary_isbn13}}
+          <!-- loop further through nested objects -->
+          {{#each book_details}}
+            <h2>{{title}}</h2>
+            <h3>{{author}}</h3>
+            <p class="description">{{description}}</p>
+            <p class="meta">Publisher: {{publisher}} / ISBN: {{primary_isbn13}}</p>
+          {{/each}}
+
+          <p class="date">Date published: {{published_date}}</p>
+
+          <p class="purchase">Buy on Amazon Books:
+            <a href={{amazon_product_url}}>{{#each book_details}} {{title}} {{/each}}</a>
           </p>
-        {{/each}}
 
-        <p class="date">Date published: {{published_date}}</p>
-
-        <p class="purchase">Buy on Amazon Books: <a href={{amazon_product_url}}>{{#each book_details}} {{title}} {{/each}}</a></p>
-
-      </li>
+        </li>
       {{/each}}
     </ul>
 
