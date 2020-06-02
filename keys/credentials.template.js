@@ -1,3 +1,3 @@
 module.exports = {
-  nyt_books: // 'add your api key here'
+  nyt_books: // 'add your api key here'.
 }
