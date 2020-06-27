@@ -18,7 +18,7 @@
   "dependencies": {
     "consolidate": "^0.15.1",
     "express": "^4.16.4",
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.3.0",
     "superagent": "^4.1.0"
   }
 }
